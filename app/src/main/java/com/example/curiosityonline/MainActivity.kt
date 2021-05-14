@@ -56,29 +56,6 @@ class MainActivity : AppCompatActivity(), PhotoAdapterListener, PhotoEntityAdapt
         })
     }
 
-    private fun photoAdapterScrollTo(position: Int) {
-        photoAdapter.registerAdapterDataObserver(object: RecyclerView.AdapterDataObserver() {
-            override fun onChanged() {
-                recyclerViewPhoto.scrollToPosition(position)
-            }
-            override fun onItemRangeRemoved(positionStart: Int, itemCount: Int) {
-                recyclerViewPhoto.scrollToPosition(position)
-            }
-            override fun onItemRangeMoved(fromPosition: Int, toPosition: Int, itemCount: Int) {
-                recyclerViewPhoto.scrollToPosition(position)
-            }
-            override fun onItemRangeInserted(positionStart: Int, itemCount: Int) {
-                recyclerViewPhoto.scrollToPosition(position)
-            }
-            override fun onItemRangeChanged(positionStart: Int, itemCount: Int) {
-                recyclerViewPhoto.scrollToPosition(position)
-            }
-            override fun onItemRangeChanged(positionStart: Int, itemCount: Int, payload: Any?) {
-                recyclerViewPhoto.scrollToPosition(position)
-            }
-        })
-    }
-
     override fun onClickDeletePhoto(photoModel: Photo, position: Int) {
         viewModel.deletePhoto(photoModel)
         this.position = position - 1
