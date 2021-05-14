@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CuriosityOnline</string>
+
+    <string name="alertCommonTitle">Внимание.</string>
+    <string name="alertCommon">Сервис временно недоступен.</string>
+    <string name="alertDelete">Удалить фото из ленты?</string>
+    <string name="alertCommon_positive">Да</string>
+    <string name="alertCommon_negative">Нет</string>
+</resources>
